@@ -35,6 +35,7 @@ namespace GuestBookTim
         {
             Console.Write("Are there more guests coming (yes/no): ");
             string continueLooping = Console.ReadLine();
+            Console.WriteLine();
 
             bool output = (continueLooping.ToLower() == "yes"); 
 
@@ -61,6 +62,8 @@ namespace GuestBookTim
             {
                 Console.WriteLine(guest);
             }
+
+            Console.WriteLine();
 
         }
 
