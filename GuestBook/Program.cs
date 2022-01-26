@@ -7,14 +7,8 @@ bool isValidNum;
 
 GuestBookMethods.WelcomeUser();
 
-//GuestBookMethods.AskUsersName();
-
-//GuestBookMethods.AskNumberGuests(guestCount);
-
-
 do
 {
-
     string userName = GuestBookMethods.AskUsersName();
     guestNames.Add(userName);
 
@@ -23,6 +17,7 @@ do
         Console.Write("How many are in your party: ");
         string numValue = Console.ReadLine();
         isValidNum = int.TryParse(numValue, out int num);
+
         if (isValidNum)
         {
             guestCount += num;
@@ -30,9 +25,10 @@ do
         else
         {
             Console.WriteLine("That is not a valid number! Try again.");
-        } 
+        }
+
     } while (!isValidNum);
-    
+
     Console.Write("Enter another party? (y/n): ");
     anotherParty = Console.ReadLine();
 
